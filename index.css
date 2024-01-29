@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.all{
+    overflow: hidden;
+}
+.fir{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    background-color: hsl(216, 12%, 8%);
+    height: 100vh;
+}
+#ratingContainer h5{
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.contain{
+    background-color: hsl(213, 19%, 18%);
+    padding: 20px;
+    border-radius: 15px;
+    width: 380px;
+}
+#ratingContainer{
+    color: white;
+}
+.egu{
+    background: rgba(255, 255, 255, 0.1);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.ohh{
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.5s ease;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    outline: 0;
+}
+.pho{
+    gap: 35px;
+}
+#resultContainer{
+    color: white;
+}
+#ratingContainer p{
+    font-weight: 200;
+}
+input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 40px;
+    color: orangered;
+    letter-spacing: 2px;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+input:hover{
+    background-color:orangered;
+    color: white;
+}
+.fine{
+    width: 120px;
+    margin-top: 35px;
+}
+#resultRating{
+    font-size: 15px;
+}
+#resultContainer p{
+    color: orangered;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+#resultContainer h4{
+    font-family: 'Inconsolata', monospace;
+    font-weight: 540;
+    margin-top: 15px;
+}
+span{
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 30px;
+} 
+@media (max-width:720px) {
+    .fir{
+        height: 92vh;
+    }
+    .contain{
+        width: 340px;
+    }
+    .pho{
+        gap: 20px;
+    }
+}
+  

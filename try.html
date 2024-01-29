@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .rating-number {
+            display: inline-block;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="ratingContainer">
+        <h2>How do we do? How will you rate us?</h2>
+        <form id="ratingForm" onsubmit="showRating(event)">
+            <div class="rating-number" onclick="setRating(1)">1</div>
+            <div class="rating-number" onclick="setRating(2)">2</div>
+            <div class="rating-number" onclick="setRating(3)">3</div>
+            <div class="rating-number" onclick="setRating(4)">4</div>
+            <div class="rating-number" onclick="setRating(5)">5</div>
+            <br>
+            
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div id="resultContainer" style="display: none;">
+        <h2>Thank you for your rating!</h2>
+        <p id="selectedRating"></p>
+        <p>Your rating: <span id="resultRating"></span></p>
+    </div>
+
+    <script>
+        const ratingContainer = document.getElementById('ratingContainer');
+        const resultContainer = document.getElementById('resultContainer');
+        const selectedRating = document.getElementById('selectedRating');
+        const resultRating = document.getElementById('resultRating');
+
+        let currentRating = 0;
+
+        function setRating(rating) {
+            currentRating = rating;
+            updateSelectedRating();
+        }
+
+        function updateSelectedRating() {
+            selectedRating.textContent = `Selected Rating: ${currentRating}`;
+        }
+
+        function showRating(event) {
+            event.preventDefault();
+            resultRating.textContent = currentRating;
+            ratingContainer.style.display = 'none';
+            resultContainer.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
